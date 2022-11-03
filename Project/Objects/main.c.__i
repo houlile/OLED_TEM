@@ -1,0 +1,4 @@
+--c99 --gnu -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I ..\Libraries\CMSIS -I ..\Libraries\STM32F10x_StdPeriph_Driver\inc -I ..\User -I ..\OLED
+-ID:\Soft\MDK\pack\Keil\STM32F1xx_DFP\2.4.0\Device\Include
+-D__UVISION_VERSION="536" -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD
+-o .\objects\main.c.o --omf_browse .\objects\main.c.crf --depend .\objects\main.c.d "..\User\main.c.c"
