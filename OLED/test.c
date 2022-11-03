@@ -62,35 +62,22 @@ typedef uint32_t u32;
 ******************************************************************************/
 void TEST_MainPage(u32 Tem,u32 Hum)
 {	
-//	GUI_ShowCHinese(10,0,16,"温度",1);
-//	GUI_ShowString(40,0,":",16,1);
-//	GUI_ShowCHinese1(10,20,16,"湿度",1);
-//	GUI_ShowString(40,20,":",16,1);	
-//	GUI_ShowNum(50,0,(u32 *)(Tem/10),2,16,1);
-//	GUI_ShowString(68,0,".",16,1);
-//	GUI_ShowNum(75,0,(u32 *)(Tem%10),1,16,1);
-//	GUI_ShowNum(50,20,(u32 *)(Hum/10),2,16,1);
-//	GUI_ShowString(68,20,".",16,1);
-//	GUI_ShowNum(75,20,(u32 *)(Hum%10),1,16,1);
-//	GUI_ShowString(85,0,"*c",16,1);
-//	GUI_ShowString(85,20,"%",16,1);
-	GUI_ShowCHinese(10,0,16,"白茶清欢无别事，我在等风也等你，苦酒折柳今相离，无风无月也无你。",1);
-	delay_ms(1500);	
-	delay_ms(1500);
+	GUI_ShowCHinese(10,0,16,"温度",1);
+	GUI_ShowString(40,0,":",16,1);
+	GUI_ShowCHinese1(10,20,16,"湿度",1);
+	GUI_ShowString(40,20,":",16,1);	
+	GUI_ShowNum(50,0,(u32 *)(Tem/10),2,16,1);
+	GUI_ShowString(68,0,".",16,1);
+	GUI_ShowNum(75,0,(u32 *)(Tem%10),1,16,1);
+	GUI_ShowNum(50,20,(u32 *)(Hum/10),2,16,1);
+	GUI_ShowString(68,20,".",16,1);
+	GUI_ShowNum(75,20,(u32 *)(Hum%10),1,16,1);
+	GUI_ShowString(85,0,"*c",16,1);
+	GUI_ShowString(85,20,"%",16,1);
+
 }
 
 
-//硬件滚动
-void roll(void)
-{  
-	OLED_WR_Byte(0x2F, OLED_CMD);  
-	OLED_WR_Byte(0x27, OLED_CMD);   
-	OLED_WR_Byte(0x00,OLED_CMD);       
-  	OLED_WR_Byte(0x00,OLED_CMD);        
-  	OLED_WR_Byte(0x07,OLED_CMD);        
-  	OLED_WR_Byte(0x2E,OLED_CMD); 	
-  	while(1);
-}
 
 
 

@@ -39,7 +39,15 @@ int main(void)
 		{
 			AHT20.flag = AHT20_ReadHT(AHT20.ht);
 			StandardUnitCon(&AHT20);
+			
 		}
+		Temp = AHT20.te * 10;
+		Hum = AHT20.rh * 10;
+		TEST_MainPage(Temp,Hum);
+		//GUI_ShowNum(52,0,52,2,16,1);
+		printf("温度:%.2f°c  湿度:%.2f%%\n",AHT20.te,AHT20.rh);
+    //Delay_ms(1000);
+
 		
     }
 }
